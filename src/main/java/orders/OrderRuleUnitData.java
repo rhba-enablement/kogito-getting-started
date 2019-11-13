@@ -9,11 +9,11 @@ import model.Order;
 /**
  * OrderRuleUnit
  */
-public class OrderRuleUnit implements RuleUnitData {
+public class OrderRuleUnitData implements RuleUnitData {
 
     private DataStore<Order> orders = DataSource.createStore();
 
-    DataStore<Order> getOrders() {
+    public DataStore<Order> getOrders() {
         return orders;
     }
 }
