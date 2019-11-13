@@ -5,7 +5,7 @@ import model.Order;
 
 rule "Accept Order"
 when
-    $o: Order ( price < 1000 ) from orders
+    $o: /orders[ $o.price < 1000 ]
 then
     modify ($o) { setApproved(true); }
 end
