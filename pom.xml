@@ -45,12 +45,6 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-kogito</artifactId>
     </dependency>
-    <!--???-->
-    <dependency>
-      <groupId>org.kie.kogito</groupId>
-      <artifactId>kogito-codegen</artifactId>
-    </dependency>
-
   </dependencies>
   <build>
     <plugins>
