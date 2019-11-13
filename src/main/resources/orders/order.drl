@@ -1,15 +1,15 @@
 package orders;
-unit OrderRuleUnit;
+unit OrderRuleUnitData;
 
 import model.Order;
 
 rule "Accept Order"
 when
-    $o: Order( price < 1000 )
+    $o: Order ( price < 1000 ) from orders
 then
-    $o.setApproved(true);
+    modify ($o) { setApproved(true); }
 end
 
 query "Orders"
-  $o : Order()
+  $o : /orders
 end
