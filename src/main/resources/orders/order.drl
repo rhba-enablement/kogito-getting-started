@@ -1,0 +1,15 @@
+package orders;
+unit OrderRuleUnit;
+
+import model.Order;
+
+rule "Accept Order"
+when
+    $o: Order( price < 1000 )
+then
+    $o.setApproved(true);
+end
+
+query "Orders"
+  $o : Order()
+end
